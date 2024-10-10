@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 14:23:31 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/10 16:45:02 by nalebrun         ###   ########.fr       */
+/*   Created: 2024/10/10 10:02:18 by nalebrun          #+#    #+#             */
+/*   Updated: 2024/10/10 16:45:10 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_isalpha(int a)
+int	ft_isdigit(int c)
 {
-	if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122))
+	if (c >= 48 && c <= 57)
 		return (1);
 	else
 		return (0);
@@ -27,21 +27,21 @@ int	ft_isalpha(int a)
 
 // int main()
 // {
-//      char c = 'a';
-//      int d = 60;
-//      int e = 94;
-//      char f = 'C';
-//      int g = 256;
+//      char c = '0';
+//      int d = 4900;
+//      int e = 40;
+//      char f = '9';
+//      int g = 59;
 
-//      printf("%d\n", ft_isalpha(c));
-//      printf("%d\n", ft_isalpha(d));
-//      printf("%d\n", ft_isalpha(e));
-//      printf("%d\n", ft_isalpha(f));
-//      printf("%d\n\n", ft_isalpha(g));
+//      printf("%d\n", ft_isdigit(c));
+//      printf("%d\n", ft_isdigit(d));
+//      printf("%d\n", ft_isdigit(e));
+//      printf("%d\n", ft_isdigit(f));
+//      printf("%d\n\n", ft_isdigit(g));
 
-//      printf("%d\n", isalpha(c));
-//      printf("%d\n", isalpha(d));
-//      printf("%d\n", isalpha(e));
-//      printf("%d\n", isalpha(f));
-//      printf("%d\n", isalpha(g));
+//      printf("%d\n", isdigit(c));
+//      printf("%d\n", isdigit(d));
+//      printf("%d\n", isdigit(e));
+//      printf("%d\n", isdigit(f));
+//      printf("%d\n", isdigit(g));
 // }
