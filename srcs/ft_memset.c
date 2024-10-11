@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:06:54 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/10 16:56:21 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/11 09:17:20 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void    *ft_memset(void *b, int c, size_t len)
 // void	printArray(int arr[], int n)
 // {
 // 	for (int i = 0; i < n; i++)
-// 		printf("interpreted out : %d ", arr[i]/16843009);
+// 		printf("%d ", arr[i]/16843009);
 //     printf("\n\n");
 // }
 
