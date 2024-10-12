@@ -6,26 +6,25 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 09:21:39 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/11 09:52:15 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/12 10:10:35 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-    unsigned char *pdst;
-    unsigned char *psrc;
-    size_t i;
+	unsigned char	*pdst;
+	unsigned char	*psrc;
+	size_t			i;
 
-    pdst = (unsigned char *)dst;
-    psrc = (unsigned char *)src;
-    i = 0;
-
-    while (i < n)
-    {
-        pdst[i] = psrc[i];
-        i++;
-    }
-    return (dst);
+	pdst = (unsigned char *)dst;
+	psrc = (unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		pdst[i] = psrc[i];
+		i++;
+	}
+	return (dst);
 }

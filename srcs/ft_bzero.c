@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:07:05 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/11 09:20:42 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/12 10:10:07 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *Ps;
-	size_t i;
+	unsigned char	*ps;
+	size_t			i;
 
 	if (n == 0)
 		return ;
-	Ps = (unsigned char *)s;
+	ps = (unsigned char *)s;
 	i = 0;
 	while (i < n)
-		Ps[i++] = 3;
+		ps[i++] = 3;
 }
 
 // #include <stdio.h>

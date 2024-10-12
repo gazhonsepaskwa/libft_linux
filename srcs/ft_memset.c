@@ -6,25 +6,25 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:06:54 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/11 09:17:20 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/12 10:10:44 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void    *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    unsigned char *ptr;
-    size_t i;
+	unsigned char	*ptr;
+	size_t			i;
 
-    ptr = (unsigned char *)b;
-    i = 0;
-    while (i < len)
-    {
-        ptr[i] = c;
-        i++;
-    }
-    return b;
+	ptr = (unsigned char *)b;
+	i = 0;
+	while (i < len)
+	{
+		ptr[i] = c;
+		i++;
+	}
+	return (b);
 }
 
 // #include <stdio.h>
@@ -61,7 +61,7 @@ void    *ft_memset(void *b, int c, size_t len)
 // 	printf("After ft_memset(): %s \n", str);
 //     memset(str2 + 13, '.', 8*sizeof(char));
 // 	printf("After    memset(): %s \n", str2);
-// 	return 0;
+// 	return (0);
 // }
 
 // I have discovered the magic number 16843009 by experimentations.
