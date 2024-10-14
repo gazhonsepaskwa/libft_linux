@@ -6,13 +6,13 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 09:21:39 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/12 10:10:35 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:39:32 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*pdst;
 	unsigned char	*psrc;

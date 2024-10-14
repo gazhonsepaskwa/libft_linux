@@ -6,13 +6,13 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 10:07:49 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/12 11:42:04 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:39:15 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
