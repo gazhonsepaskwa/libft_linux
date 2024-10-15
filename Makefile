@@ -6,7 +6,7 @@
 #    By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 14:22:51 by nalebrun          #+#    #+#              #
-#    Updated: 2024/10/09 14:22:57 by nalebrun         ###   ########.fr        #
+#    Updated: 2024/10/15 17:00:33 by nalebrun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 CC = gcc
 
 # Flags
-CFLAGS -Wall -Werror -Wextra -g -Iinclude
+CFLAGS = -Wall -Werror -Wextra -g -I includes
 
 # Dirs
 SRCDIR = src

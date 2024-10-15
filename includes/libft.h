@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:33:28 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:51:18 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/15 17:53:37 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,9 @@ char	**ft_split(const char *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void 	ft_putstr_fd(char *s, int fd);
+void 	ft_putendl_fd(char *s, int fd);
+void 	ft_putnbr_fd(int n, int fd);
 
 #endif
