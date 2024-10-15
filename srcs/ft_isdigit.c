@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:02:18 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/10 16:45:10 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/15 16:52:41 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,18 @@
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
-		return (1);
+		return (2048);
 	else
 		return (0);
 }
-
-// tests
+// the is_digit fonction return 2048 for a yes on linux ...
 
 // #include <ctype.h>
 // #include <stdio.h>
 
 // int main()
 // {
-//      char c = '0';
+//      char c = '4';
 //      int d = 4900;
 //      int e = 40;
 //      char f = '9';

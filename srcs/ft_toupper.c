@@ -6,20 +6,20 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 12:01:30 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/12 12:13:14 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/15 16:54:11 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-        return (c - 32);
-    else
-        return (c);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
 }
 
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 
 // int main(void)
 // {
@@ -46,7 +46,8 @@ int ft_toupper(int c)
 //         int result = ft_toupper(test_chars[i]);
 //         int expected = toupper(test_chars[i]);
 //         printf("ft_toupper('%c') = '%c', expected = '%c' -> %s\n",
-//             test_chars[i], result, expected, (result == expected) ? "PASS" : "FAIL");
+//             test_chars[i], result, expected,
+//	(result == expected) ? "PASS" : "FAIL");
 //     }
-//     return 0;
+//     return (0);
 // }

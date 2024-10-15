@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 10:58:07 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/14 11:58:20 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/15 16:53:28 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return (s1[i] - s2[i]);
 }
-
 
 // test
 

@@ -6,18 +6,17 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 12:07:21 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/12 12:16:01 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/15 16:54:02 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-        return (c + 32);
-    else
-        return (c);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
 }
-
 
 // #include <stdio.h>
 // #include <ctype.h>
@@ -47,7 +46,8 @@ int ft_tolower(int c)
 //         int result = ft_tolower(test_chars[i]);
 //         int expected = tolower(test_chars[i]);
 //         printf("ft_tolower('%c') = '%c', expected = '%c' -> %s\n",
-//             test_chars[i], result, expected, (result == expected) ? "PASS" : "FAIL");
+//             test_chars[i], result, expected,
+//	(result == expected) ? "PASS" : "FAIL");
 //     }
-//     return 0;
+//     return (0);
 // }

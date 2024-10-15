@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 10:07:49 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/14 11:39:15 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/15 16:53:20 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 	ft_bzero(dst, n);
 
 // 	r  = ft_strlcpy(dst, src, 0);
-// 	printf("After ft_strlcpy : %s | return : %zu\n", dst, r);
+// 	printf("After ft_strlcpy : %s | return (: %zu\n", dst, r));
 // 	r =    strlcpy(dst, src, 0);
-// 	printf("After    strlcpy : %s | return : %zu\n\n", dst, r);
+// 	printf("After    strlcpy : %s | return (: %zu\n\n", dst, r));
 
 // 	r  = ft_strlcpy(dst, src, 4);
-// 	printf("After ft_strlcpy : %s | return : %zu\n", dst, r);
+// 	printf("After ft_strlcpy : %s | return (: %zu\n", dst, r));
 // 	r =    strlcpy(dst, src, 4);
-// 	printf("After    strlcpy : %s | return : %zu\n\n", dst, r);
+// 	printf("After    strlcpy : %s | return (: %zu\n\n", dst, r));
 
 // 	r =    strlcpy(dst, src, -12);
-// 	printf("After    strlcpy : %s | return : %zu\n", dst, r);
+// 	printf("After    strlcpy : %s | return (: %zu\n", dst, r));
 // 	r  = ft_strlcpy(dst, src, -12);
-// 	printf("After ft_strlcpy : %s | return : %zu\n", dst, r);
+// 	printf("After ft_strlcpy : %s | return (: %zu\n", dst, r));
 // }

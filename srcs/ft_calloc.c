@@ -6,20 +6,19 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:18:45 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/14 17:17:59 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/15 16:52:52 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    void *ptr;
+	void	*ptr;
 
-    ptr = malloc(count * size);
-    if (!ptr)
-        return (NULL);
-    ft_bzero(ptr, count * size);
-    return(ptr);
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }
-

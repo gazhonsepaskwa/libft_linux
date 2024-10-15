@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 09:06:01 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:53:33 by nalebrun         ###   ########.fr       */
+/*   Created: 2024/10/15 16:32:03 by nalebrun          #+#    #+#             */
+/*   Updated: 2024/10/15 16:53:26 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	size_t			len;
+	unsigned int	i;
+	char			*out;
 
-	i = ft_strlen(s);
-	while (i != 0)
+	if (!s || !f)
+		return (NULL);
+	len = ft_strlen(s);
+	out = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!out)
+		return (NULL);
+	i = 0;
+	while (i < len)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i--;
+		out[i] = f(i, s[i]);
+		i++;
 	}
-	return (NULL);
+	out[len] = '\0';
+	return (out);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main (void)
-// {
-//     char    *str = "tralala";
-//     char    c = 'l';
-//     char    *res = ft_strrchr(str, c);
-//     char    *res2 = ft_strrchr(str, c);
-
-//     printf("ft_strchr : %s\n   strchr : %s\n\n", res, res2);
-// }

@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:06:54 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/12 10:10:44 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/15 16:52:16 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	*ft_memset(void *b, int c, size_t len)
 // 	int arr[n];
 //     int arr2[n];
 
-// 	// int test
 // 	ft_memset(arr, 3, n * sizeof(int));
 // 	printf("Array after ft_memset()\n");
 // 	printArray(arr, n);
@@ -51,12 +50,10 @@ void	*ft_memset(void *b, int c, size_t len)
 // 	printf("Array after memset()\n");
 // 	printArray(arr2, n);
 
-//     // char test
-// 	char str[50] = "GeeksForGeeks is for programming geeks.";
-//     char str2[50] = "GeeksForGeeks is for programming geeks.";
+// 	char str[50] =  "I am the greatest technitian that ever lived";
+//     char str2[50] = "I am the greatest technitian that ever lived";
 // 	printf("\nBefore : %s\n", str);
 
-// 	// Fill 8 characters starting from str[13] with '.'
 // 	ft_memset(str + 13, '.', 8*sizeof(char));
 // 	printf("After ft_memset(): %s \n", str);
 //     memset(str2 + 13, '.', 8*sizeof(char));

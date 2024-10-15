@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:12:06 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/10 16:44:51 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/15 16:52:50 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
+		return (8);
 	else
 		return (0);
 }
+// the function return 8 for a true on linux...
 
 // tests
 
