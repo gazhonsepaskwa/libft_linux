@@ -1,60 +1,129 @@
+# # **************************************************************************** #
+# #                                                                              #
+# #                                                         :::      ::::::::    #
+# #    Makefile                                           :+:      :+:    :+:    #
+# #                                                     +:+ +:+         +:+      #
+# #    By: nalebrun <nalebrun@student.s19.be>          +#+  +:+       +#+         #
+# #                                                 +#+#+#+#+#+   +#+            #
+# #    Created: 2024/10/09 14:22:51 by nalebrun          #+#    #+#              #
+# #    Updated: 2024/10/15 17:00:33 by nalebrun         ###   ########.fr        #
+# #                                                                              #
+# # **************************************************************************** #
+
+# # Compiler and flags
+# CC = gcc
+# CFLAGS = -Wall -Werror -Wextra -I includes -lbsd
+
+# # Directories
+# SRCDIR = srcs
+# OBJDIR = build
+# INCDIR = includes
+
+# # Library Name
+# NAME = libft.a
+
+# # Source and object files
+# SRCS = $(wildcard $(SRCDIR)/*.c)
+# OBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
+
+# # Phony targets
+# .PHONY: all clean fclean re
+
+# # Default target
+# all: $(NAME)
+
+# # Rule to create the library
+# $(NAME): $(OBJS)
+# 	ar rcs $@ $^
+# 	@echo "Library $(NAME) created."
+
+# # Rule to create object files
+# $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
+# 	$(CC) $(CFLAGS) -c $< -o $@
+
+# # Create object directory if not exists
+# $(OBJDIR):
+# 	@mkdir -p $(OBJDIR)
+
+# # Clean object files
+# clean:
+# 	@rm -rf $(OBJDIR)
+# 	@echo "Object files removed."
+
+# # Full clean (object files and library)
+# fclean: clean
+# 	@rm -f $(NAME)
+# 	@echo "Cleaned all generated files."
+
+# # Rebuild everything
+# re: fclean all
+
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+         #
+#    By: nalebrun <nalebrun@student.s19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 14:22:51 by nalebrun          #+#    #+#              #
 #    Updated: 2024/10/15 17:00:33 by nalebrun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Compiler
+# Compiler and flags
 CC = gcc
+CFLAGS = -Wall -Werror -Wextra -I includes -lbsd
 
-# Flags
-CFLAGS = -Wall -Werror -Wextra -g -I includes
-
-# Dirs
-SRCDIR = src
+# Directories
+SRCDIR = srcs
+OBJDIR = build
 INCDIR = includes
-BUILDDIR = build
-LIBDIR = .
 
-# Target name
-LIBNAME = libft.a
+# Library Name
+NAME = libft.a
 
-# Sources
+# Source and object files
 SRCS = $(wildcard $(SRCDIR)/*.c)
+OBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 
-# Objects
-OBJS = $(patsubst $(SRCDIR)/%.c, $(BUILDDIR)/%.o, $(SRCS))
+# Test file
+TEST_SRC = test.c
+TEST_EXEC = test_executable
 
 # Phony targets
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re test
 
 # Default target
-# (all : _lib_ -> means lib must be buid to be marked as up to date)
-all: $(LIBDIR)/$(LIBNAME)
+all: $(NAME)
 
-# Rule to create the lib
-# ($@ = auto var to rep. $(LIBDIR)/$(LIBNAME) | $^ auto var to rep. $(OBJS) )
-$(LIBDIR)/$(LIBNAME): $(OBJS)
-	@ar rcs $@ $^
+# Rule to create the library
+$(NAME): $(OBJS)
+	ar rcs $@ $^
+	@echo "Library $(NAME) created."
 
-# Rule to create the objects files
-# ($< = auto var to rep. the source file
-$(BUILDDIR)/%.o: $(SRCDIR)/%.c
-	@mkdir -p $(BUILDDIR)
+# Rule to create object files
+$(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Clean the lib and build dir
-fclean:
-	rm -rf $(BUILDDIR) $(LIBDIR)/$(LIBNAME)
+# Create object directory if not exists
+$(OBJDIR):
+	@mkdir -p $(OBJDIR)
 
-# Clean the build dir
+# Clean object files
 clean:
-	rm -rf $(BUILDDIR)
+	@rm -rf $(OBJDIR)
+	@echo "Object files removed."
 
+# Full clean (object files and library)
+fclean: clean
+	@rm -f $(NAME) $(TEST_EXEC)
+	@echo "Cleaned all generated files."
+
+# Rebuild everything
 re: fclean all
+
+# Test rule to compile libft.a with test.c
+test: all $(TEST_SRC)
+	$(CC) $(CFLAGS) $(TEST_SRC) -L. -lft -o $(TEST_EXEC)
+	@echo "Compiled $(TEST_EXEC) with $(NAME)."
+

@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:00:41 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:52:56 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/16 15:25:47 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,40 +46,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res *= sign);
 }
-
-// tests
-
-// #include <stdlib.h>
-// #include <stdio.h>
-
-// int main(void)
-// {
-//     char *str[20];
-//     int error = 0;
-//     int lenstr = 10;
-
-//     str[0] = "12";
-//     str[1] = "-4";
-//     str[2] = "   -4";
-//     str[3] = "asdjfg";
-//     str[4] = "aaa67ss";
-//     str[5] = "126fff";
-//     str[6] = "as-1";
-//     str[7] = "--4";
-//     str[8] = "+4";
-//     str[9] = "-4a";
-
-//     for (int i = 0; i < lenstr; i++)
-//     {
-//         if (!(ft_atoi(str[i]) == atoi(str[i]))) // ft_atoi(str[i])
-//         {
-//             printf("ft_atoi: %d\n   atoi: %d\n\n",
-//                     ft_atoi(str[i]),atoi(str[i]));
-//             error = 1;
-//         }
-//     }
-//     if (error == 0)
-//         printf("Tests OK\n");
-
-//     return (0);
-// }
