@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:36:46 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/16 10:10:24 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/16 11:26:39 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_bpaszerro(void *s, size_t n)
 	ps = (unsigned char *)s;
 	i = 0;
 	while (i < n)
-		ps[i++] = 1;
+		ps[i++] = 48;
 }
 
 static char	*ft_itoamem(int n)
@@ -43,8 +43,9 @@ static char	*ft_itoamem(int n)
 		n /= 10;
 		i++;
 	}
-	res = malloc(((i + 1) + sign + 1) * sizeof(char));
-	ft_bpaszerro(res, (i + 1) + sign + 1 * sizeof(char));
+	res = malloc(((i + 1) + sign + 1)  * sizeof(char));
+	res[i + 1 + sign] = '\0';
+	ft_bpaszerro(res, ((i + 1) + sign) * sizeof(char));
 	return (res);
 }
 
@@ -67,20 +68,20 @@ char	*ft_itoa(int n)
 	i--;
 	while (n > 9)
 	{
-		res[i--] = n % 10;
+		res[i--] = (n % 10) + '0';
 		n /= 10;
 	}
 	res[i] = n + '0';
 	return (res);
 }
 
-#include <stdio.h>
-int	main(void)
-{
-	char	*res;
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char	*res;
 
-	res = ft_itoa(-423);
-	printf("%s", res);
-	free(res);
-	res = NULL;
-}
+// 	res = ft_itoa(-423);
+// 	printf("%s", res);
+// 	free(res);
+// 	res = NULL;
+// }
