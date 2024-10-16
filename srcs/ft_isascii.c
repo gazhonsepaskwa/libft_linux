@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:11:09 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 17:17:03 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:48:13 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_isascii(int c)
 
 // tests
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 // int main()
 // {

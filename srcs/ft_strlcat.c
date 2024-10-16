@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 10:07:49 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:53:13 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:09:49 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dstsize + src_len - 1);
 }
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
 // int main(void)
 // {

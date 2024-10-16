@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 12:01:30 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:54:11 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:09:13 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_toupper(int c)
 		return (c);
 }
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 // int main(void)
 // {

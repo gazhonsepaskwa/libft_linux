@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:42:56 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:53:36 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:09:36 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static int	ft_instr(int c, char *str)
 	}
 	return (0);
 }
+
 static int	ft_gettrimstart(const char *str, const char *set)
 {
 	int	i;
@@ -34,6 +35,7 @@ static int	ft_gettrimstart(const char *str, const char *set)
 		i++;
 	return (i);
 }
+
 static int	ft_gettrimend(const char *str, const char *set)
 {
 	int	i;

@@ -6,12 +6,17 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 18:01:01 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 18:03:04 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:03:04 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void 	ft_putendl_fd(char *s, int fd)
+#include "../includes/libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
 {
-    write(fd, s, ft_strlen(s));
-    write(fd, '\n', 1);
+	int	d;
+
+	d = 10;
+	write(fd, s, ft_strlen(s));
+	write(fd, &d, 1);
 }

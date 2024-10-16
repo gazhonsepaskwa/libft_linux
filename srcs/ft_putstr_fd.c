@@ -6,13 +6,13 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:53:50 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 17:59:36 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:05:48 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void 	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    write(fd, s, ft_strlen(s));
+	write(fd, s, ft_strlen(s));
 }

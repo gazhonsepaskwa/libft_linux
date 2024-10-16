@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:28:31 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:53:00 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/16 10:09:28 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,20 +50,16 @@ static char	*copy_word(const char *s, int start, int end)
 	return (word);
 }
 
-char	**ft_split(const char *s, char c)
+char	**truc(int word_count, const char *s, char c)
 {
-	int		i;
 	int		start;
 	int		end;
-	int		word_count;
+	int		i;
 	char	**result;
 
-	i = 0;
 	start = -1;
 	end = -1;
-	if (!s)
-		return (NULL);
-	word_count = count_words(s, c);
+	i = 0;
 	result = ft_calloc((word_count + 1), sizeof(char *));
 	if (!result)
 		return (NULL);
@@ -81,18 +77,32 @@ char	**ft_split(const char *s, char c)
 	return (result);
 }
 
+char	**ft_split(const char *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = truc(count_words(s, c), s, c);
+	if (!result)
+		return (NULL);
+	return (result);
+}
+
 // #include <stdio.h>
 
-// int main() {
-// 	const char *str = "Hello, this is a splited qwerty";
-// 	char **result = ft_split(str, ' ');
+// int	main(void)
+// {
+// 	const char	*str = "Hello, this is a splited string";
+// 	char		**result;
 
-// 	for (int i = 0; result[i] != NULL; i++) {
+// 	result = ft_split(str, ' ');
+// 	for (int i = 0; result[i] != NULL; i++)
+// 	{
 // 		printf("{%s} ", result[i]);
 // 		free(result[i]);
 // 	}
 // 	free(result);
 // 	result = NULL;
-
 // 	return (0);
 // }
