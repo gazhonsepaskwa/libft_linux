@@ -72,7 +72,7 @@
 
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -I includes -lbsd
+CFLAGS = -Wall -Werror -Wextra -I includes -lbsd -fsanitize=address -g
 
 # Directories
 SRCDIR = srcs

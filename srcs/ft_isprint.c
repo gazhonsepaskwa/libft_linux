@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:23:47 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:52:38 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:11:04 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return (1);
+		return (16384);
 	else
 		return (0);
 }

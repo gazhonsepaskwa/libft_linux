@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 10:07:49 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/16 09:09:49 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/17 16:13:49 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,33 +29,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[dst_len + i] = '\0';
-	return (dstsize + src_len - 1);
+	return (dst_len + src_len);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main(void)
-// {
-// 	const char	*src = "coucou";
-// 	char 		dst[14] = "tralala";
-// 	char 		dst2[14] = "tralala";
-// 	char 		dst3[14] = "tralala";
-// 	size_t		r;
-
-// 	r  = ft_strlcat(dst, src, 0);
-// 	printf("After ft_strlcat : %s | return (: %zu\n", dst, r));
-// 	r =    strlcat(dst, src, 0);
-// 	printf("After    strlcat : %s | return (: %zu\n\n", dst, r));
-
-// 	r  = ft_strlcat(dst2, src, 5);
-// 	printf("After ft_strlcat : %s | return (: %zu\n", dst2, r));
-// 	r =    strlcat(dst2, src, 5);
-// 	printf("After    strlcat : %s | return (: %zu\n\n", dst2, r));
-
-// 	r  = ft_strlcat(dst3, src, -12);
-// 	printf("After ft_strlcat : %s | return (: %zu\n", dst3, r));
-// 	// // r =    strlcat(dst3, src, -12);
-// 	// // printf("After    strlcat : %s | return (: %zu\n", dst3, r);
-		// overflow warning
-// }

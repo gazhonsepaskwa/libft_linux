@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:38:09 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:53:07 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/17 15:04:04 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 
 	if (!s1)
 		return (NULL);
-	out = ft_calloc(ft_strlen(s1), sizeof(char));
+	out = ft_calloc(ft_strlen(s1) + 1, sizeof(char));
 	if (!out)
 		return (NULL);
 	i = 0;
@@ -28,7 +28,6 @@ char	*ft_strdup(const char *s1)
 		out[i] = s1[i];
 		i++;
 	}
-	out[i] = '\0';
 	return (out);
 }
 

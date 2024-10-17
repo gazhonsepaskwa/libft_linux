@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 09:37:46 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:52:21 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:49:43 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,25 +33,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main(void) {
-//     char str1[50] = "Hello, World!";
-//     char str2[50] = "Goodbye, World!";
-
-//     ft_memmove(str1 + 7, str1, 6);
-//     printf("ft_memmove result: %s\n", str1);
-
-//     ft_memmove(str2, str2 + 8, 6);
-//     printf("ft_memmove result: %s\n", str2);
-
-// 	memmove(str1 + 7, str1, 6);
-//     printf("memmove result: %s\n", str1);
-
-//     memmove(str2, str2 + 8, 6);
-//     printf("memmove result: %s\n", str2);
-
-//     return (0);
-// }

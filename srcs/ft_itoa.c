@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_doesnt_WORKK.c                             :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:36:46 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/16 11:26:39 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:47:40 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_bpaszerro(void *s, size_t n)
 		ps[i++] = 48;
 }
 
-static char	*ft_itoamem(int n)
+static char	*ft_itoamem(long int n)
 {
 	int		i;
 	char	*res;
@@ -43,7 +43,7 @@ static char	*ft_itoamem(int n)
 		n /= 10;
 		i++;
 	}
-	res = malloc(((i + 1) + sign + 1)  * sizeof(char));
+	res = malloc(((i + 1) + sign + 1) * sizeof(char));
 	res[i + 1 + sign] = '\0';
 	ft_bpaszerro(res, ((i + 1) + sign) * sizeof(char));
 	return (res);
@@ -51,37 +51,28 @@ static char	*ft_itoamem(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*res;
-	int		i;
+	char		*res;
+	int			i;
+	long int	num;
 
-	res = ft_itoamem(n);
+	num = n;
+	res = ft_itoamem(num);
 	if (!res)
 		return (NULL);
 	i = 0;
-	if (n < 0)
+	if (num < 0)
 	{
 		res[i] = '-';
-		n *= -1;
+		num *= -1;
 	}
 	i = ft_strlen(res);
 	res[i] = '\0';
 	i--;
-	while (n > 9)
+	while (num > 9)
 	{
-		res[i--] = (n % 10) + '0';
-		n /= 10;
+		res[i--] = (num % 10) + '0';
+		num /= 10;
 	}
-	res[i] = n + '0';
+	res[i] = num + '0';
 	return (res);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char	*res;
-
-// 	res = ft_itoa(-423);
-// 	printf("%s", res);
-// 	free(res);
-// 	res = NULL;
-// }

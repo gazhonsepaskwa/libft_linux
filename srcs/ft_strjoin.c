@@ -6,7 +6,7 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:14:32 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/15 16:53:10 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/17 19:03:44 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	out = ft_calloc(ft_strlen(s1) + ft_strlen(s2), sizeof(char));
+	out = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (!out)
 		return (NULL);
 	i = 0;
