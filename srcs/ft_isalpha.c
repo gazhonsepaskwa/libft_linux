@@ -6,11 +6,11 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:23:31 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/17 12:06:35 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/18 09:21:23 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_isalpha(int a)
 {

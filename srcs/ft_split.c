@@ -6,103 +6,74 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:28:31 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/16 10:09:28 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/18 11:39:55 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 static int	count_words(const char *s, char c)
 {
+	int	i;
 	int	count;
-	int	in_word;
 
+	i = 0;
 	count = 0;
-	in_word = 0;
-	while (*s)
+	while (s[i])
 	{
-		if (*s != c && !in_word)
-		{
-			in_word = 1;
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
 			count++;
-		}
-		else if (*s == c)
-			in_word = 0;
-		s++;
+		i++;
 	}
 	return (count);
 }
 
-static char	*copy_word(const char *s, int start, int end)
+static char	*malloc_word(const char *s, char c)
 {
-	int		i;
+	int		len;
 	char	*word;
+	int		i;
 
-	word = ft_calloc(end - start + 1, sizeof(char));
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	word = (char *)malloc(sizeof(char) * (len + 1));
 	if (!word)
 		return (NULL);
 	i = 0;
-	if (s[end + 1] == 0)
-		end++;
-	while (start < end)
-		word[i++] = s[start++];
-	word[i] = 0;
-	return (word);
-}
-
-char	**truc(int word_count, const char *s, char c)
-{
-	int		start;
-	int		end;
-	int		i;
-	char	**result;
-
-	start = -1;
-	end = -1;
-	i = 0;
-	result = ft_calloc((word_count + 1), sizeof(char *));
-	if (!result)
-		return (NULL);
-	while (s[++end])
+	while (i < len)
 	{
-		if (s[end] != c && start == -1)
-			start = end;
-		if ((s[end] == c || s[end + 1] == '\0') && start != -1)
-		{
-			result[i++] = copy_word(s, start, end);
-			start = -1;
-		}
+		word[i] = s[i];
+		i++;
 	}
-	result[i] = NULL;
-	return (result);
+	word[i] = '\0';
+	return (word);
 }
 
 char	**ft_split(const char *s, char c)
 {
 	char	**result;
+	int		words;
+	int		i;
+	int		j;
 
-	if (!s)
-		return (NULL);
-	result = truc(count_words(s, c), s, c);
+	words = count_words(s, c);
+	result = (char **)calloc((words + 1), sizeof(char *));
 	if (!result)
 		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i] && j < words)
+	{
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+		{
+			result[j] = malloc_word(s + i, c);
+			if (!result[j])
+				return (NULL);
+			j++;
+		}
+		i++;
+	}
+	result[j] = NULL;
 	return (result);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	const char	*str = "Hello, this is a splited string";
-// 	char		**result;
-
-// 	result = ft_split(str, ' ');
-// 	for (int i = 0; result[i] != NULL; i++)
-// 	{
-// 		printf("{%s} ", result[i]);
-// 		free(result[i]);
-// 	}
-// 	free(result);
-// 	result = NULL;
-// 	return (0);
-// }

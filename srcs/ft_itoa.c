@@ -6,11 +6,11 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:36:46 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/17 12:47:40 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/18 09:21:17 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_bpaszerro(void *s, size_t n)
 {

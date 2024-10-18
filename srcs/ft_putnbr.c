@@ -6,11 +6,11 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 18:03:38 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/16 09:05:29 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/18 09:21:00 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

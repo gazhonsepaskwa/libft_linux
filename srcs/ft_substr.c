@@ -6,11 +6,11 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:17:16 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/17 18:54:55 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/18 12:30:50 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
@@ -35,14 +35,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	}
 	return (sub);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-//     const char *s = "Eat, sleep, think. But don't die";
-//     printf("%s\n", ft_substr(s, 5, 6));
-	// HOW TO FREE ????
-//     printf("%s", ft_substr(s, 5, 70));
-	// HOW TO FREE ????
-// }

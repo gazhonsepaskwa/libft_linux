@@ -6,11 +6,11 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:42:56 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/16 09:09:36 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/18 12:30:44 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 static int	ft_instr(int c, char *str)
 {
@@ -31,7 +31,7 @@ static int	ft_gettrimstart(const char *str, const char *set)
 	int	i;
 
 	i = 0;
-	while (ft_instr(str[i], (char *)set))
+	while (ft_instr(str[i], (char *)set) && str[i])
 		i++;
 	return (i);
 }
@@ -55,6 +55,12 @@ char	*ft_strtrim(const char *s1, const char *set)
 
 	cpy = (char *)s1;
 	trimstart = ft_gettrimstart(s1, set);
+	if (trimstart == ft_strlen(s1))
+	{
+		cpy = malloc(1);
+		cpy[0] = 0;
+		return (cpy);
+	}
 	trimend = ft_gettrimend(s1, set);
 	cpy = ft_calloc(ft_strlen(s1) - (trimstart + trimend) + 1, sizeof(char));
 	i = 0;
@@ -66,13 +72,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 	cpy[i] = 0;
 	return (cpy);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-//  printf("debug: real start");
-//     char trimset[100] = "sed";
-//     char str[100] = "dseeeOutputsdd";
-//     printf("Output ?= %s", ft_strtrim(str, trimset));
-//     /// should be freed but how ??
-// }

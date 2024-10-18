@@ -6,11 +6,11 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:14:32 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/17 19:03:44 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/18 12:30:07 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
@@ -32,20 +32,3 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		out[i++] = s2[j++];
 	return (out);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-//     const char  *s1 = "This sentence is too long ";
-//     const char  *s2 = "too fit in one stringg.";
-//     const char  *s3;
-//     char        *str;
-
-//     str = ft_strjoin(s1, s2);
-//     printf("%s\n", str);
-
-//     str = ft_strjoin(s3, s3);
-//     printf("%s", str);
-//     free(str);
-// }
