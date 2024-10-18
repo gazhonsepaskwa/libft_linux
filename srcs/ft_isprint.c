@@ -6,11 +6,11 @@
 /*   By: nalebrun <nalebrun@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:23:47 by nalebrun          #+#    #+#             */
-/*   Updated: 2024/10/18 12:29:27 by nalebrun         ###   ########.fr       */
+/*   Updated: 2024/10/18 15:37:44 by nalebrun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_isprint(int c)
 {
